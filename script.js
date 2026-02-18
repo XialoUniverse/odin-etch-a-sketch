@@ -2,8 +2,11 @@ let container = document.querySelector('.container');
 
 function resetCanvas(size) {
     container.innerHTML = '';
+    if (size > 100) {
+        size = 100;
+    }
     let squareClass;
-    if (size > 50) {
+    if (size > 30) {
         container.classList.add('container-border');
         squareClass = 'black-border-square';
     } else {
