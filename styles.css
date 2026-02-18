@@ -28,12 +28,22 @@ button {
     flex-wrap: wrap;
 }
 
-.square {
+.container-border {
+    box-sizing: content-box;
     border: 2px solid white;
+}
+
+.square {
+    border: 1px solid white;
+    background-color: black;
+}
+
+.black-border-square {
+    border: 1px solid black;
     background-color: black;
 }
 
 .activated-square {
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: white;
 }
