@@ -22,6 +22,10 @@ function resetCanvas(size) {
             square.addEventListener('mouseover', (event) => {
                 square.classList.remove(squareClass);
                 square.classList.add('activated-square');
+                let r = Math.floor(Math.random() * 255);
+                let g = Math.floor(Math.random() * 255);
+                let b = Math.floor(Math.random() * 255);
+                square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             })
             container.appendChild(square);
         }
