@@ -23,20 +23,17 @@ button {
 
 .container {
     width: 480px;
+    height: 480px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .square {
-    height: 30px;
-    width: 30px;
     border: 2px solid white;
     background-color: black;
 }
 
 .activated-square {
-    height: 30px;
-    width: 30px;
     border: 2px solid white;
     background-color: white;
 }
