@@ -1,12 +1,25 @@
 let container = document.querySelector('.container');
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
-        let square = document.createElement('div');
-        square.classList.add('square');
-        square.addEventListener('mouseover', (event) => {
-            square.classList.remove('square');
-            square.classList.add('activated-square');
-        })
-        container.appendChild(square);
+
+function resetCanvas(size) {
+    container.innerHTML = '';
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            let square = document.createElement('div');
+            square.classList.add('square');
+            square.addEventListener('mouseover', (event) => {
+                square.classList.remove('square');
+                square.classList.add('activated-square');
+            })
+            container.appendChild(square);
+        }
     }
 }
+
+let btn = document.querySelector('button');
+btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    let size = parseInt(prompt('Enter new canvas size: '));
+    resetCanvas(size);
+})
+
+resetCanvas(16);
